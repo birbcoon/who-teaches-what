@@ -1,13 +1,21 @@
 import React from 'react'
-import Classes from './ClassList'
-import Professors from './ProfessorList'
-import Assignments from './AssignmentList'
+import Classes from '../containers/ClassList'
+import Professors from '../containers/ProfessorList'
+import Assignments from '../containers/AssignmentList'
 
 const App = () => (
-    <div>
-        <Classes />
-        <Professors />
-        <Assignments />
+    <div className="container">
+        <div className="row">
+            <div className="col-md-4">
+                <Classes />
+            </div>
+            <div className="col-md-4">
+                <Professors />
+            </div>
+            <div className="col-md-4">
+                <Assignments />
+            </div>
+        </div>
     </div>
 )
 export default App

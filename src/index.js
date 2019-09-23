@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 
 
 import { createStore, applyMiddleware } from 'redux';
@@ -11,7 +10,13 @@ import { Provider } from 'react-redux';
 import App from './components/App'
 import rootReducer from './reducers';
 
-const store = createStore(rootReducer, {}, composeWithDevTools(applyMiddleware()));
+import 'bootstrap/dist/css/bootstrap.min.css'; 
+import './index.css';
+
+const compose = composeWithDevTools({trace:true})
+
+const store = createStore(rootReducer, {}, compose(applyMiddleware()));
+
 
 ReactDOM.render(
     <Provider store={store}>

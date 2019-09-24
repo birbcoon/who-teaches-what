@@ -1,10 +1,10 @@
 import { combineReducers } from "redux";
 
-import BooksReducer from './reducer_books';
-import ActiveBookReducer from './reducer_active_book';
+import CourseReducer from './reducer_courses';
+import ProfReducer from './reducer_profs';
 const rootReducer = combineReducers({
     // our first state in Redux store - books
-    books: BooksReducer,
-    activeBook: ActiveBookReducer
+    courses: CourseReducer,
+    profs: ProfReducer
 });
 export default rootReducer;

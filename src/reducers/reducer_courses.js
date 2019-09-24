@@ -83,12 +83,11 @@ const initialState = [
         creditHours: 3,
         name: "Theory of Programming Languages",
         nrOfSections: 1
-    ​​},
-    ​​
+    },
     {
         code: "4345",
         creditHours: 3,
-        name: "Operating Systems",​​
+        name: "Operating Systems",
         nrOfSections: 1
     },
     {
@@ -96,11 +95,11 @@ const initialState = [
         creditHours: 3,
         name: "Formal Languages and Automata Theory",
         nrOfSections: 1
-    },​​
+    },
     {
         code: "4721",
         creditHours: 3,
-        name: "Database Design I",   ​​
+        name: "Database Design I",
         nrOfSections: 1
     },
     {
@@ -108,8 +107,8 @@ const initialState = [
         creditHours: 3,
         name: "Artificial Intelligence",
         nrOfSections: 1
-    ​​},
-    ​​
+    },
+
     {
         code: "4830",
         creditHours: 3,
@@ -129,10 +128,8 @@ const initialState = [
         nrOfSections: 2
     }
 ]
-​​
+
 export default function(state = initialState, action) {
-    return state.map(course => {
-        
-    })
+    return state
 
 }

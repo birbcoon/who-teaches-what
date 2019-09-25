@@ -7,8 +7,8 @@ class Classes extends Component{
     renderList(){
         return this.props.courses.map(course => {
             const cn =
-                this.props.action &&
-                this.props.action.code === course.code
+                this.props.activeCourse &&
+                this.props.activeCourse.course.code === course.code
                     ? "collection-item active center"
                     : "collection-item center"
             return (
@@ -33,7 +33,7 @@ class Classes extends Component{
 function mapStateToProps(state) {
     return {
         courses: state.courses,
-        action: state.action,
+        activeCourse: state.selectCourse,
         prof: state.selectProf
     };
 }

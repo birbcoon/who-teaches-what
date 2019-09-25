@@ -8,8 +8,8 @@ class Professors extends Component {
     renderList(){
         return this.props.profs.map(prof => {
             const cn =
-                this.props.action &&
-                this.props.action.name === prof.name
+                this.props.selectProf &&
+                this.props.selectProf.name === prof.name
                     ? "collection-item active center"
                     : "collection-item center"
             return (
@@ -30,7 +30,7 @@ class Professors extends Component {
 function mapStateToProps(state) {
     return {
         profs: state.profs,
-        action: state.action
+        selectProf: state.selectProf
     };
 }
 

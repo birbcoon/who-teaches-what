@@ -6,17 +6,26 @@ import Assignments from '../containers/AssignmentList'
 const App = () => (
     <div className="container">
         <div className="row">
-            <div className="col-md-4">
+            <div className="col s4">
                 <h2>Courses</h2>
-                <Classes />
+                <div class="divider"></div>
+                <div class="section">
+                    <Classes />
+                </div>
             </div>
-            <div className="col-md-4">
+            <div className="col s4">
                 <h2>Professors</h2>
-                <Professors />
+                <div class="divider"></div>
+                <div class="section">
+                    <Professors />
+                </div>
             </div>
-            <div className="col-md-4">
+            <div className="col s4">
                 <h2>Assignments</h2>
-                <Assignments />
+                <div class="divider"></div>
+                <div class="section">
+                    <Assignments />
+                </div>
             </div>
         </div>
     </div>

@@ -10,7 +10,7 @@ import { Provider } from 'react-redux';
 import App from './components/App'
 import rootReducer from './reducers';
 
-import 'bootstrap/dist/css/bootstrap.min.css'; 
+import 'materialize-css/dist/css/materialize.min.css'; 
 import './index.css';
 
 const compose = composeWithDevTools({trace:true})

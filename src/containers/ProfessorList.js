@@ -1,15 +1,22 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { selectClass } from '../actions/index';
+import { selectProfessor } from '../actions/index';
 
 
 class Professors extends Component {
     renderList(){
         return this.props.profs.map(prof => {
+            const cn =
+                this.props.action &&
+                this.props.action.name === prof.name
+                    ? "collection-item active center"
+                    : "collection-item center"
             return (
-                <li key={prof.name} className="collection-item active">
-                    {prof.name}<br />
+                <li key={prof.name} 
+                    className={cn} 
+                    onClick={() => this.props.selectProfessor(prof)}>
+                    <h5>{prof.name}</h5><br />
                     Number of credit hours: {prof.nrOfCreditHours} <br />
                     Number of classes: {prof.nrOfClasses}
                 </li>
@@ -22,11 +29,12 @@ class Professors extends Component {
 }
 function mapStateToProps(state) {
     return {
-        profs: state.profs
+        profs: state.profs,
+        action: state.action
     };
 }
 
 function mapDispatchToProps(dispatch){
-    return bindActionCreators({ selectClass: selectClass }, dispatch);
+    return bindActionCreators({ selectProfessor: selectProfessor }, dispatch);
 }
 export default connect(mapStateToProps, mapDispatchToProps)(Professors);

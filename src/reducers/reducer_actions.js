@@ -1,9 +1,10 @@
 export default function(state=null, action) {
     switch(action.type){
-        case 'BOOK_SELECTED': 
+        case 'COURSE_SELECTED': 
             return action.payload;
+        case 'PROFESOR_SELECTED':
+            return action.payload
         default:
             return state;
     }
-    return state;
 }

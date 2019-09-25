@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { selectBook } from '../actions/index';
+import { selectClass } from '../actions/index';
 
 class Classes extends Component{
     renderList(){
         return this.props.courses.map(course => {
             return (
-                <li key={course.code} className="list-group-item">
+                <li key={course.code} className="list-group-item list-group-item-secondary">
                     {course.code}
                 </li>
             )
@@ -26,6 +26,6 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch){
-    return bindActionCreators({ selectBook: selectBook }, dispatch);
+    return bindActionCreators({ selectClass: selectClass }, dispatch);
 }
 export default connect(mapStateToProps, mapDispatchToProps)(Classes);

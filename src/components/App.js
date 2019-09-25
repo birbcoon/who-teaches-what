@@ -15,7 +15,7 @@ const App = () => (
                 <Professors />
             </div>
             <div className="col-md-4">
-                <h2>Assigments</h2>
+                <h2>Assignments</h2>
                 <Assignments />
             </div>
         </div>

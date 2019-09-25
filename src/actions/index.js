@@ -1,6 +1,6 @@
-export function selectBook(book){
+export function selectClass(course){
     return {
-        type: 'BOOK_SELECTED',
-        payload: book
+        type: 'COURSE_SELECTED',
+        payload: course
     }
 }

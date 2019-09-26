@@ -14,7 +14,7 @@ export function selectAssignment(assignment){// to remove from the assignment
     //CODE TO REMOVE FROM THE LIST
     //splice/slice the array 0-INDEX and then INDEX+1 to end 
     return {
-        type: 'REMOVE_ASSIGNMENT',
+        type: 'REMOVED_ASSIGNMENT',
         payload: assignment
     }
 }

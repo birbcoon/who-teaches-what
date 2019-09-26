@@ -6,14 +6,15 @@ export default function(state = initialState, action) {
         case 'REMOVED_ASSIGNMENT':
             let course = action.payload.course
             let prof = action.payload.professor
+
             course.nrOfSections += 1
             prof.nrOfCreditHours -= course.creditHours
             prof.nrOfClasses -= 1
-            state = state.splice(state.indexOf(action.payload))
+
+            state.splice(state.indexOf(action.payload) - 1)
             console.log(state)
             return state
-        case 'PROFESOR_SELECTED':
-            return state;
+
         case 'COURSE_SELECTED':
             if(action.payload.professor !== null)
             {
@@ -24,7 +25,8 @@ export default function(state = initialState, action) {
                 prof.nrOfCreditHours += course.creditHours
                 prof.nrOfClasses += 1
             }
-            return [...state,action.payload];
+            initialState = [...state,action.payload]
+            return initialState;
 
         
         default:

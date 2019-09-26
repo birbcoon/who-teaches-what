@@ -3,6 +3,8 @@ let initialState = []
 export default function(state = initialState, action) {
     
     switch(action.type){
+        //REASON IT DOES NOT UPDATE DYNAMICALLY IS 
+        //BECAUSE THIS IS DONE IN ThE REDUCER
         case 'REMOVED_ASSIGNMENT':
             let course = action.payload.course
             let prof = action.payload.professor

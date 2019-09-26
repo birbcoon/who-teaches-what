@@ -3,26 +3,24 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { selectCourse, selectProfessor } from '../actions/index';
 
-class Classes extends Component{
+class Assignments extends Component{
     renderList(){
-        return this.props.courses.map(course => {
-            const cn =
-                this.props.activeCourse &&
-                this.props.activeCourse.code === course.code
-                    ? "collection-item active center"
-                    : "collection-item center"
-            return (
-                course.nrOfSections !== 0 ?
-                <li key={course.code} 
-                    className= {cn}
-                    onClick={() => this.props.selectCourse(course,this.props.prof)}>
-                    <h5>CS {course.code}</h5><br />
-                    {course.name}<br />
-                    Credit hours: {course.creditHours}<br />
-                    Sections Offered: {course.nrOfSections}
-                </li> : null
-            )
-        })
+        console.log(this.props.assignments)
+        if (this.props.assignments !== null){
+            return this.props.assignments.map(assignment => {
+                const cn = "collection-item center"
+                return (
+                    <li key={assignment.course.code} 
+                        className= {cn}
+                        >
+                        <h5>CS {assignment.course.code}</h5><br />
+                        {assignment.course.name}<br />
+                        Credit hours: {assignment.course.creditHours}<br />
+                        Sections Offered: {assignment.course.nrOfSections}
+                    </li>
+                )  
+            })
+        }
     }
     render() {
         return <ul className="collection">{this.renderList()}</ul>
@@ -34,11 +32,12 @@ function mapStateToProps(state) {
     return {
         courses: state.courses,
         activeCourse: state.selectCourse,
-        prof: state.selectProf
+        prof: state.selectProf,
+        assignments: state.assignments
     };
 }
 
 function mapDispatchToProps(dispatch){
     return bindActionCreators({ selectCourse: selectCourse, selectProfessor: selectProfessor }, dispatch);
 }
-export default connect(mapStateToProps, mapDispatchToProps)(Classes);
+export default connect(mapStateToProps, mapDispatchToProps)(Assignments);

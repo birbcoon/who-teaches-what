@@ -7,7 +7,6 @@ import ActionReducer from './reducer_activeCourse'
 import selectProf from './reducer_activeProf'
 
 const rootReducer = combineReducers({
-    // our first state in Redux store - books
     courses: CourseReducer,
     profs: ProfReducer,
     assignments: AssignReducer,

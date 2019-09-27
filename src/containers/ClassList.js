@@ -12,6 +12,7 @@ class Classes extends Component{
                     ? "collection-item active center"
                     : "collection-item center"
             return (
+                //This checks number of sections if 0 it wont render
                 course.nrOfSections !== 0 ?
                 <li key={course.code} 
                     className= {cn}

@@ -8,6 +8,8 @@ class Assign extends Component{
         return this.props.assignments.map(assignment => {
             const cn = "collection-item center"
             return (assignment.professor !== null ?
+                //key is the index of the list so topmost object has a key of 0
+                //next one has a key of 1, then 2, then 3, and so on
                 <li key={this.props.assignments.indexOf(assignment)}
                     className= {cn}
                     onClick={() => this.props.selectAssignment(assignment)}>
@@ -25,9 +27,6 @@ class Assign extends Component{
 
 function mapStateToProps(state) {
     return {
-        // courses: state.courses,
-        // activeCourse: state.selectCourse,
-        // prof: state.selectProf,
         assignments: state.assignments
     };
 }

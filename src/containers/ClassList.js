@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { selectCourse, selectProfessor } from '../actions/index';
+import { selectCourse } from '../actions/index';
 
 class Classes extends Component{
     renderList(){
@@ -15,7 +15,7 @@ class Classes extends Component{
                 course.nrOfSections !== 0 ?
                 <li key={course.code} 
                     className= {cn}
-                    onClick={() => this.props.selectCourse(course,this.props.prof)}>
+                    onClick={() => this.props.selectCourse(course,this.props.professors[this.props.professors.indexOf(this.props.prof)])}>
                     <h5>CS {course.code}</h5><br />
                     {course.name}<br />
                     Credit hours: {course.creditHours}<br />
@@ -34,11 +34,12 @@ function mapStateToProps(state) {
     return {
         courses: state.courses,
         activeCourse: state.selectCourse,
-        prof: state.selectProf
+        prof: state.selectProf,
+        professors: state.profs
     };
 }
 
 function mapDispatchToProps(dispatch){
-    return bindActionCreators({ selectCourse: selectCourse, selectProfessor: selectProfessor }, dispatch);
+    return bindActionCreators({ selectCourse: selectCourse }, dispatch);
 }
 export default connect(mapStateToProps, mapDispatchToProps)(Classes);

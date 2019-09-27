@@ -7,13 +7,13 @@ class Assign extends Component{
     renderList(){
         return this.props.assignments.map(assignment => {
             const cn = "collection-item center"
-            return (
+            return (assignment.professor !== null ?
                 <li key={this.props.assignments.indexOf(assignment)}
                     className= {cn}
                     onClick={() => this.props.selectAssignment(assignment)}>
                     <h5>{assignment.professor.name}</h5><br />
                     {assignment.course.name}<br />
-                </li>
+                </li>:null
             )
         })
     }

@@ -8,22 +8,22 @@ const App = () => (
         <div className="row">
             <div className="col s4">
                 <h2>Courses</h2>
-                <div class="divider"></div>
-                <div class="section">
+                <div className="divider"></div>
+                <div className="section">
                     <Classes />
                 </div>
             </div>
             <div className="col s4">
                 <h2>Professors</h2>
-                <div class="divider"></div>
-                <div class="section">
+                <div className="divider"></div>
+                <div className="section">
                     <Professors />
                 </div>
             </div>
             <div className="col s4">
                 <h2>Assignments</h2>
-                <div class="divider"></div>
-                <div class="section">
+                <div className="divider"></div>
+                <div className="section">
                     <Assignments />
                 </div>
             </div>

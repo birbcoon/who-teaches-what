@@ -10,5 +10,24 @@ const initialState = [
 ]
 
 export default function(state = initialState, action) {
-    return state
+    switch(action.type){
+        case "COURSE_SELECTED":
+            return state.map( prof => {
+                return action.payload.professor !== null && prof.name === action.payload.professor.name
+                    ? Object.assign({}, prof, {
+                        nrOfCreditHours: prof.nrOfCreditHours + action.payload.course.creditHours,
+                        nrOfClasses: prof.nrOfClasses + 1
+                    }): prof
+            })
+        case "REMOVED_ASSIGNMENT":
+                return state.map( prof => {
+                    return prof.name === action.payload.professor.name 
+                        ? Object.assign({}, prof, {
+                            nrOfCreditHours: prof.nrOfCreditHours - action.payload.course.creditHours,
+                            nrOfClasses: prof.nrOfClasses - 1
+                        }): prof
+                    })
+        default:
+            return state
+    }
 }

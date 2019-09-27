@@ -130,6 +130,23 @@ const initialState = [
 ]
 
 export default function(state = initialState, action) {
-    return state
+    switch(action.type){
+        case "COURSE_SELECTED":
+            return state.map(course => {
+                return action.payload.professor !== null && course.code === action.payload.course.code
+                    ? Object.assign({}, course, {
+                        nrOfSections: course.nrOfSections - 1
+                    }): course
+            })
+        case "REMOVED_ASSIGNMENT":
+                return state.map(course => {
+                    return course.code === action.payload.course.code
+                        ? Object.assign({}, course, {
+                            nrOfSections: course.nrOfSections + 1
+                        }): course
+                    })
+        default:
+            return state
+    }
 
 }

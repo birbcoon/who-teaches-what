@@ -8,7 +8,7 @@ export default function(state = initialState, action) {
         case 'REMOVED_ASSIGNMENT':
             (state.splice(state.indexOf(action.payload), 1))
 
-            return state
+            return [...state]
 
         case 'COURSE_SELECTED':
             return [...state,action.payload];    

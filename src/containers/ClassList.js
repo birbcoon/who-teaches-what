@@ -15,7 +15,7 @@ class Classes extends Component{
                 course.nrOfSections !== 0 ?
                 <li key={course.code} 
                     className= {cn}
-                    onClick={() => this.props.selectCourse(course,this.props.professors[this.props.professors.indexOf(this.props.prof)])}>
+                    onClick={() => this.props.selectCourse(course,(this.props.prof), this.props.professors)}>
                     <h5>CS {course.code}</h5><br />
                     {course.name}<br />
                     Credit hours: {course.creditHours}<br />

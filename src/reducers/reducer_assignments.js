@@ -6,7 +6,7 @@ export default function(state = initialState, action) {
         //REASON IT DOES NOT UPDATE DYNAMICALLY IS 
         //BECAUSE THIS IS DONE IN ThE REDUCER
         case 'REMOVED_ASSIGNMENT':
-            initialState = (state.splice(state.indexOf(action.payload) ))
+            (state.splice(state.indexOf(action.payload), 1))
 
             return state
 

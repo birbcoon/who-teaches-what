@@ -1,3 +1,28 @@
+commit 542d44c7ee6bcdcd7184cd134a67d247438afaea
+Merge: d35ff64 6f4c14c
+Author: Andy <russellandy98@gmail.com>
+Date:   Mon Sep 30 17:30:49 2019 -0400
+
+    Merge branch 'master' of github.com:VSU-CS-FullStack/p4-who-teaches-what-Andrew-Muna
+
+commit d35ff6411c8346084177c7b9ae455b5e148d4b0f
+Author: Andy <russellandy98@gmail.com>
+Date:   Mon Sep 30 17:30:00 2019 -0400
+
+    logfile created
+
+commit df82425f5c82a90af84690ed0f070bd1ec1397b3
+Author: Andy <russellandy98@gmail.com>
+Date:   Mon Sep 30 17:25:29 2019 -0400
+
+    Added sorting to assignments and missing course
+
+commit 6f4c14c45b12f07a32ed5bbde21bcbd7cabbd2c0
+Author: Muna Jemal <muna.aman66@gmail.com>
+Date:   Sun Sep 29 11:49:09 2019 -0400
+
+    Removed yarn.lock to push to heroku
+
 commit e72de074c6be4d3e5f4704ba1f5a7fd7dc711bf5
 Author: Andy <russellandy98@gmail.com>
 Date:   Fri Sep 27 16:02:59 2019 -0400

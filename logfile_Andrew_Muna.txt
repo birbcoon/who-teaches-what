@@ -1,0 +1,137 @@
+commit e72de074c6be4d3e5f4704ba1f5a7fd7dc711bf5
+Author: Andy <russellandy98@gmail.com>
+Date:   Fri Sep 27 16:02:59 2019 -0400
+
+    Getting ready for Heroku
+
+commit 1d43e663a73a77650cbfb2315dc32245b32c6c9f
+Author: Andy <russellandy98@gmail.com>
+Date:   Fri Sep 27 15:59:18 2019 -0400
+
+    It all updates dynamically by moving to reducer and mapping it again
+
+commit 8bd96c422f3a4551533cd990ff35b636a428f294
+Author: Andy <russellandy98@gmail.com>
+Date:   Fri Sep 27 15:00:57 2019 -0400
+
+    courses update dynamically and assigments remove dynamically only professors remain
+
+commit b45f59a5910e3d772e5c93aa5e2efd09ff9cee43
+Author: Andy <russellandy98@gmail.com>
+Date:   Fri Sep 27 13:22:13 2019 -0400
+
+    added comments
+
+commit ce45001555fa47dee5ef9dfdf9a79fe652eeb039
+Author: Andy <russellandy98@gmail.com>
+Date:   Fri Sep 27 11:56:29 2019 -0400
+
+    Assignments are removed dynamically now
+
+commit e508c087377fdea09bc649e50131d21d122f1826
+Author: Andy <russellandy98@gmail.com>
+Date:   Fri Sep 27 11:52:31 2019 -0400
+
+    Classes are added back when they are removed from assignments still not dynamic
+
+commit f1ad2d32de739e38e6e81eb88f98f4b0b85d2721
+Author: Andy <russellandy98@gmail.com>
+Date:   Fri Sep 27 11:34:45 2019 -0400
+
+    moved changes reducer makes to the actions
+
+commit 5b49b0a6a082210651cf251763392d5d58a3ff0a
+Author: Andy <russellandy98@gmail.com>
+Date:   Thu Sep 26 16:40:23 2019 -0400
+
+    added some notes
+
+commit 311e234c2a17d7e36a7546da89b7a63023438195
+Author: Andy <russellandy98@gmail.com>
+Date:   Thu Sep 26 15:11:22 2019 -0400
+
+    assignment array splice implemented. App functions as intended but not dynamically
+
+commit b46864cad688a076a72f751719c110e5607f899c
+Author: Andy <russellandy98@gmail.com>
+Date:   Thu Sep 26 14:54:41 2019 -0400
+
+    reducer assignment receives REMOVED_ASSIGNMENT action
+
+commit 1193fca396e0e042340ceea13694cceb85f1cf2d
+Author: Andy <russellandy98@gmail.com>
+Date:   Thu Sep 26 14:50:22 2019 -0400
+
+    made Assignments column output look how its supposed to be
+
+commit 867d9a5385fb76a099ffde1693e4a1120d25d288
+Author: Andy <russellandy98@gmail.com>
+Date:   Wed Sep 25 19:27:01 2019 -0400
+
+    fixed our css to see what is selected
+
+commit 0eaaa0a30876cdbcb611d5ed6a7e9db8ec046bbb
+Author: Andy <russellandy98@gmail.com>
+Date:   Wed Sep 25 19:20:32 2019 -0400
+
+    got payload of Select Course to hold both a course and professor
+
+commit 700fcd92dba4b4c45f7b6722087b2cfbf2e55662
+Author: Andy <russellandy98@gmail.com>
+Date:   Wed Sep 25 18:18:39 2019 -0400
+
+    messed with css more
+
+commit 6d724af0c8ef29054318b0ba40132daa6181e042
+Author: Andy <russellandy98@gmail.com>
+Date:   Wed Sep 25 17:23:36 2019 -0400
+
+    messed with css
+
+commit a46e56adb3750b1effdd735512a6d1887256fc57
+Author: Andy <russellandy98@gmail.com>
+Date:   Wed Sep 25 17:00:22 2019 -0400
+
+    made more readable
+
+commit 6edc6bf59524b2773f2d3b9b16d1ed431b957013
+Author: Andy <russellandy98@gmail.com>
+Date:   Tue Sep 24 15:46:00 2019 -0400
+
+    displayed all professors as list items
+
+commit 0c1a8642f0769bd279852048ce9bf53f51b695eb
+Author: Andy <russellandy98@gmail.com>
+Date:   Tue Sep 24 15:41:36 2019 -0400
+
+    displayed all courses as list items
+
+commit 46b36eed147d4b2a0ae6eb6c79a86f72ab655a6c
+Author: Andy <russellandy98@gmail.com>
+Date:   Mon Sep 23 18:59:46 2019 -0400
+
+    Added courses and professors
+
+commit 1f3ee6af31823d3eb130ffa819d1801d9ecc7a05
+Author: Andy <russellandy98@gmail.com>
+Date:   Mon Sep 23 17:06:31 2019 -0400
+
+    Made sure app rendered just fine with all the needed classes
+
+commit 857888212cca84ac16e07127a65fb50dbe66d67c
+Author: Andy <russellandy98@gmail.com>
+Date:   Wed Sep 18 17:30:29 2019 -0400
+
+    added redux tools and react tools
+
+commit 47490af9c276d50b23139b6c6795ded9ef3d776c
+Author: Andy <russellandy98@gmail.com>
+Date:   Wed Sep 18 17:15:53 2019 -0400
+
+    started app creation
+
+commit a8619e99500de41489fa77f5f8c21a9ff3f00275
+Author: Andy <russellandy98@gmail.com>
+Date:   Wed Sep 18 17:10:29 2019 -0400
+
+    Initial commit from Create React App

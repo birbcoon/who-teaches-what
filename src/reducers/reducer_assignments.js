@@ -1,5 +1,4 @@
 let initialState = []
-
 export default function(state = initialState, action) {
     
     switch(action.type){
@@ -15,14 +14,16 @@ export default function(state = initialState, action) {
 
         case 'COURSE_SELECTED':
             //Adds an assignment to a new array that contains everything state has
-            if([...state,action.payload].length < 2){
-                return [...state,action.payload].slice().sort(
-                        (course1,course2) => {
-                            let course1Name = course1.professor.name.split(' ')
-                            let course2Name = course2.professor.name.split(' ')
-                            return (course1Name[2]).localeCompare(course2Name[2])
+            if(action.payload.professor !== null)
+            {
+                if([...state,action.payload].length >= 2){
+                    return [...state,action.payload].sort(
+                            (course1,course2) => {
+                                let course1Name = course1.professor.name.split(' ')
+                                let course2Name = course2.professor.name.split(' ')
+                                return (course1Name[2]).localeCompare(course2Name[2])
              })
-            }   
+            }  } 
             return [...state,action.payload]  
         default:
             return state
